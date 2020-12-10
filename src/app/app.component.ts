@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'martin-demo';
+
+  constructor(private router: Router){
+
+  }
+
+  public changeTab(num: string) :void{
+    this.router.navigateByUrl(num)
+  }
 }

@@ -17,7 +17,7 @@
     "target": "es2015",
     "module": "es2020",
     "paths": {
-      "~martin/*": ["src/*"],
+      "~martin/*": ["./src/*"],
     },
     "lib": [
       "es2018",
