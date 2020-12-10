@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comp-a.component.scss']
 })
 export class CompAComponent implements OnInit {
+  public demoText: string;
+  public grandKidCount: number = 0;
 
-  constructor() { }
+  constructor(
+  ) {
+    this.demoText = 'father is saying have kid ASAP!';
+  }
 
   ngOnInit(): void {
+  }
+
+  getFromChildren(event: any) {
+    this.grandKidCount = event;
   }
 
 }

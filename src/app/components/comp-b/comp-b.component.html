@@ -1,1 +1,11 @@
-<p>comp-b works!</p>
+<div class="demo-box">
+    <p>I'm son</p>
+    <p>{{text}}</p>
+    <button (click)="createBaby()">create Baby</button>
+    <p>I got {{babyCount}} kids</p>
+    <div>
+        <img *ngFor= "let key of kidsArr(babyCount)"
+        height=100
+        src="https://static.scientificamerican.com/blogs/cache/file/7069F0BB-A9AB-4932-84F508BBC0136458_source.jpg?w=590&h=800&F754D658-CE37-41EE-BE2C0EFC7134D582" />
+    </div>
+</div>

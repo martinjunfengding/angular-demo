@@ -1,1 +1,6 @@
-<p>comp-a works!</p>
+
+<div class="demo-box">
+    <p>I'm father</p>
+    <p>I got {{grandKidCount}} grand kids</p>
+    <app-comp-b [innerContent]="demoText" (giveToDaddy)="getFromChildren($event)"></app-comp-b>
+</div>
