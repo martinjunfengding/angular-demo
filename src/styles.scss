@@ -2,8 +2,18 @@
 .demo-box {
     border: 1px solid black;
     padding: 1em;
-}
 
-.babys {
-    display: inline-block;
+    p {
+        color: #333;
+        font-weight: 550;
+    }
+
+    .babys {
+        display: inline-block;
+        padding: 1em;
+
+        p {
+            margin-left: 2.5em;
+        }
+    }
 }
