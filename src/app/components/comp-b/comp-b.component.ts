@@ -13,7 +13,7 @@ import { throttleTime, debounceTime } from 'rxjs/operators';
 export class CompBComponent implements OnInit, OnDestroy {
   @Input() innerContent: any;
   @Output() giveToDaddy = new EventEmitter();
-  //
+  
   public text: any;
   public babyCount: any[] = [];
   public makeBaby$ = new Subject<any>();
