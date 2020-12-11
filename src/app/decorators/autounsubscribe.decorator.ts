@@ -15,7 +15,6 @@ export function AutoUnsubscribe(constructor: any) {
                 const property = this[prop];
                 //  unsubscribe if the subject is still open.
                 if (property && typeof property.unsubscribe === 'function' && !property.closed && property instanceof Subscription) {
-                    // console.log(property)
                     property.unsubscribe();
                     console.log(`unsubscribed!`)
                 }
