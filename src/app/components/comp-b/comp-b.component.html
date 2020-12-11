@@ -11,3 +11,7 @@
         <p>is a {{key.gender}}!</p>
     </div>
 </div>
+
+<div *ngIf="testArr && testArr.length > 0">
+    <div *ngFor= "let index of testArr">system log: {{index}}</div>
+</div>

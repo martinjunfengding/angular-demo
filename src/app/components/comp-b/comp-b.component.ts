@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
 import { AppServiceService } from "~martin/app/services/app-service.service"
-import { Subscription, Subject } from 'rxjs';
+import { Subscription, Subject, interval } from 'rxjs';
 import { AutoUnsubscribe } from "~martin/app/decorators/autounsubscribe.decorator";
 import { throttleTime, debounceTime } from 'rxjs/operators';
 
@@ -13,12 +13,14 @@ import { throttleTime, debounceTime } from 'rxjs/operators';
 export class CompBComponent implements OnInit, OnDestroy {
   @Input() innerContent: any;
   @Output() giveToDaddy = new EventEmitter();
-  
+
   public text: any;
   public babyCount: any[] = [];
   public makeBaby$ = new Subject<any>();
   public getBabyDataSubscription: Subscription | undefined;
   public makeBabyDataSubscription: Subscription | undefined;
+  public testMemorySubscription: Subscription | undefined;
+  public testMemoryArr: any = [];
 
   constructor(
     private appService: AppServiceService
@@ -41,6 +43,15 @@ export class CompBComponent implements OnInit, OnDestroy {
         })
       }
     });
+
+    // this.testMemorySubscription = interval(500).subscribe(() => {
+    //   for (let i = 0; i < 100; i++) {
+    //     this.testMemoryArr.push(i);
+    //     this.testMemoryArr.forEach((element: any) => {
+    //       console.log(element);
+    //     });
+    //   }
+    // });
   }
 
 
